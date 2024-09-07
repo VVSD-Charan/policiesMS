@@ -1,0 +1,12 @@
+spring:
+  application.name: policies
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver 
+    url: jdbc:mysql://localhost/policies
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8000
