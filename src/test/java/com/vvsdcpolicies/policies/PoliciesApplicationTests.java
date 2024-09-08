@@ -22,7 +22,7 @@ class PoliciesApplicationTests {
 	private PoliciesServiceImpl policiesService;
 
 	@Test
-	public void addPolicyValidTest()
+	void addPolicyValidTest()
 	{
 		PoliciesDTO policiesDTO = new PoliciesDTO();
 		Policies policies = new Policies();

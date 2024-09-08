@@ -58,9 +58,8 @@ public class ExceptionControllerAdvice {
 		LOGGER.error(exception.getMessage(),exception);
 		ErrorInfo errorInfo = new ErrorInfo();
 		
-		if(exception instanceof MethodArgumentNotValidException)
+		if(exception instanceof MethodArgumentNotValidException manvException)
 		{
-			MethodArgumentNotValidException manvException = (MethodArgumentNotValidException)exception;
 			errorInfo.setErrorMessage(manvException.getBindingResult().getAllErrors().stream().map(ObjectError::getDefaultMessage).collect(Collectors.joining(", ")));
 		}
 		else
